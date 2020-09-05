@@ -6,15 +6,15 @@ Optionally replaces the old citation keys in a given .tex file
 
 ## Use
 
-    - Place py-inspire-ize.py in the directory of the .bib file
-    - `python py-inspire-ize.py -b (.bib file name)`
+* Place py-inspire-ize.py in the directory of the .bib file
+* `python py-inspire-ize.py -b (.bib file name)`
     
     ### Optional
     
-    - add `-t (.tex file name)` to replace the citation keys in the tex file with the new INSPIRE-HEP keys
+    * add `-t (.tex file name)` to replace the citation keys in the tex file with the new INSPIRE-HEP keys
     
 ## Help
 
-    - `python py-inspire-ize.py -h [--help]`
+* `python py-inspire-ize.py -h [--help]`
 
 
