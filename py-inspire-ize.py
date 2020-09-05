@@ -1,18 +1,6 @@
-# A simple python CLI tool to clean .bib files by converting the
-# entries to the INSPIREHEP standard
+#A simple python CLI tool to convert bibtex references to the INSPIRE-HEP standard. Checks a .bib file for references not matching the INSPIRE-HEP standard, queries the INSPIRE-HEP database, and replaces the reference if the bibliographic information is found.
 
-# Given a bib file will check if the citation key is of the INSPIREHEP form.
-# If not will search the INSPIREHEP database for the bib information and,
-# upon getting results, will update the .bib file with the new information.
-# Optionally, can automatically replace all of the old citation keys in the
-# document with the new ones.
-
-# Run : 
-# python3 py-inspire-ize,py -b (bib file)
-
-# -t (tex file) is optional, 
-
-# python3 py-inspire-ize.py -h (--help) for more information.
+#Optionally replaces the old citation keys in a given .tex file
 
 import optparse
 import os
