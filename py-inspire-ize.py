@@ -14,6 +14,7 @@ parser = optparse.OptionParser()
 
 parser.add_option('-b', action="store", default="", help=".bib file")
 parser.add_option('-t', action="store", default="", help=".tex file")
+parser.add_option('--new-file', action="store_true", default=False, help="writes output .bib file to a new file with name (.bib file name)-inspireized.bib")
 
 options_in, args = parser.parse_args()
 
@@ -118,11 +119,18 @@ else:
                 print('\t\t'+entry['title'])
                 print()
 
+    print('Found '+str(len(remove_entry))+' / '+str(num_bad_entries)+' entries to replace.')
+    print()
+
     for entry in remove_entry:
 
         new_bib_database.entries.remove(entry)
 
-    new_bib_file = open(bib_file_name, 'w')
+    if options['new_file']:
+        new_bib_file = open(os.path.splitext(bib_file_name)[0]+'-inspireized.bib', 'w+')
+    else:
+        new_bib_file = open(bib_file_name, 'w')
+
     bibtexparser.dump(new_bib_database, new_bib_file)
     new_bib_file.close()
 

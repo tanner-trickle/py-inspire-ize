@@ -12,6 +12,7 @@ Optionally replaces the old citation keys in a given .tex file
     ### Optional
     
     * add `-t (.tex file name)` to replace the citation keys in the tex file with the new INSPIRE-HEP keys
+    * add `--new-file` to create a new .bib file instead of overwriting the old one. New .bib file has the same name but an -inspireized added.
     
 ## Help
 
